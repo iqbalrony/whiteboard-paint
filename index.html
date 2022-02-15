@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas paint</title>
+
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0 auto;
+			background: white;
+			background: url(https://picsum.photos/600);
+			background-size: cover;
+		}
+
+		canvas {
+			border: 20px solid #e84500;
+			border-radius: 10px;
+			background: white;
+			display: block;
+			overflow: hidden;
+			cursor: cell;
+			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.color-box {
+			background: #fff;
+			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+			position: absolute;
+			right: 0;
+			top: 10px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 3px 7px;
+			font-size: 18px;
+			text-align: center;
+		}
+
+		.color-box input{
+			display: block;
+			width: 65px;
+			height: 40px;
+			padding: 0;
+			margin: 5px auto;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="color-box">
+		<label for="">Color<input type="color" id="colorpicker" value="#00000">
+		</label>
+	</div>
+	<canvas id="canvas-board"></canvas>
+	<script src="main.js"></script>
+</body>
+
+</html>
