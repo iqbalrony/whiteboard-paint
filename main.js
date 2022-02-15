@@ -52,6 +52,12 @@
   canvas.addEventListener("mousemove", drawPaint);
   canvas.addEventListener("mouseup", cbfMouseup);
 
+  //For touch screen device
+  canvas.addEventListener("touchstart", cbfMouseDown);
+  canvas.addEventListener("touchmove", drawPaint);
+  canvas.addEventListener("touchend", cbfMouseup);
+
+
   colorpicker.addEventListener("change", function () {
     ctx.strokeStyle = this.value;
 	ctx.lineWidth = lineWidth;
