@@ -45,19 +45,10 @@
 			text-align: center;
 		}
 
-		.color-box input {
-			display: block;
-			width: 65px;
-			height: 40px;
-			padding: 0;
-			margin: 5px auto;
-			border-radius: 5px;
-		}
-
 		.buttons-area {
 			position: absolute;
 			right: 16px;
-			top: 100px;
+			top: 25px;
 		}
 
 		button {
@@ -73,16 +64,25 @@
 			margin-bottom: 12px;
 		}
 
+		button.color {
+			padding: 4px 4px;
+		}
+
+		button.color input {
+			width: 33px;
+			height: 25px;
+			border: 0;
+			padding: 0;
+			border-radius: 6px;
+			cursor: pointer;
+		}
 	</style>
 </head>
 
 <body>
-	<div class="color-box">
-		<label for="">Color<input type="color" id="colorpicker" value="#00000">
-		</label>
-	</div>
 	<canvas id="canvas-board"></canvas>
 	<div class="buttons-area">
+		<button class="color" title="Select Brush Color"><input type="color" id="colorpicker" value="#00000"></button>
 		<button class="draw" title="Draw"><i class="fa-solid fa-paintbrush"></i></button>
 		<button class="eraser" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
 		<button class="reset" title="Reset"><i class="fa-solid fa-rotate"></i></button>
