@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Canvas paint</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 	<style>
 		body {
@@ -28,6 +30,7 @@
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+
 		.color-box {
 			background: #fff;
 			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -42,7 +45,7 @@
 			text-align: center;
 		}
 
-		.color-box input{
+		.color-box input {
 			display: block;
 			width: 65px;
 			height: 40px;
@@ -50,6 +53,26 @@
 			margin: 5px auto;
 			border-radius: 5px;
 		}
+
+		.buttons-area {
+			position: absolute;
+			right: 16px;
+			top: 100px;
+		}
+
+		button {
+			display: block;
+			padding: 6px 14px;
+			border-radius: 6px;
+			border: none;
+			color: #fff;
+			background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+			background-origin: border-box;
+			box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+			cursor: pointer;
+			margin-bottom: 12px;
+		}
+
 	</style>
 </head>
 
@@ -59,6 +82,12 @@
 		</label>
 	</div>
 	<canvas id="canvas-board"></canvas>
+	<div class="buttons-area">
+		<button class="draw" title="Draw"><i class="fa-solid fa-paintbrush"></i></button>
+		<button class="eraser" title="Eraser"><i class="fa-solid fa-eraser"></i></button>
+		<button class="reset" title="Reset"><i class="fa-solid fa-rotate"></i></button>
+		<button class="download" title="Download"><i class="fa-solid fa-download"></i></button>
+	</div>
 	<script src="main.js"></script>
 </body>
 
