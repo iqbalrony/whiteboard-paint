@@ -52,6 +52,7 @@
   canvas.addEventListener("mousedown", cbfMouseDown);
   canvas.addEventListener("mousemove", drawPaint);
   canvas.addEventListener("mouseup", cbfMouseup);
+  canvas.addEventListener("mouseout", cbfMouseup);
 
   //For touch screen device
   canvas.addEventListener("touchstart", function (e) {
