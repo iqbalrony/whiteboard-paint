@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 	<style>
+		/*
+		* Prefixed by https://autoprefixer.github.io
+		* PostCSS: v8.4.14,
+		* Autoprefixer: v10.4.7
+		* Browsers: last 4 version
+		*/
+
 		.canvas-wraper {
 			margin: 0 auto;
 			background: white;
@@ -27,22 +34,32 @@
 			display: block;
 			overflow: hidden;
 			cursor: cell;
+			-webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 			position: fixed;
 			left: 50%;
 			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 			z-index: 2;
 		}
 
 		.color-box {
 			background: #fff;
+			-webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 			position: absolute;
 			right: 0;
 			top: 10px;
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
 			display: inline-flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
 			padding: 3px 7px;
 			font-size: 18px;
@@ -66,6 +83,8 @@
 			position: relative;
 			right: -100px;
 			z-index: 3;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
 			transition: all 0.3s;
 		}
 
@@ -79,8 +98,11 @@
 			border-radius: 6px;
 			border: none;
 			color: #fff;
+			background: -webkit-gradient(linear, left top, left bottom, from(#4B91F7), to(#367AF6));
+			background: -o-linear-gradient(top, #4B91F7 0%, #367AF6 100%);
 			background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
 			background-origin: border-box;
+			-webkit-box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
 			box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
 			cursor: pointer;
 			margin-bottom: 12px;
@@ -104,6 +126,7 @@
 			border-radius: 6px;
 			cursor: pointer;
 		}
+
 	</style>
 </head>
 
