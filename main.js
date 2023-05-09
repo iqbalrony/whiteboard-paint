@@ -3,13 +3,14 @@
   const canvas = document.querySelector("#canvas-board");
   const colorpicker = document.querySelector("#colorpicker");
   const draw = document.querySelector(".draw");
+  const size = draw.querySelector('input');
   const eraser = document.querySelector(".eraser");
   const reset = document.querySelector(".reset");
   const download = document.querySelector(".download");
   const tools = document.querySelector(".tools");
 
   const ctx = canvas.getContext("2d");
-  const lineWidth = 4;
+  var lineWidth = 4;
 
   canvas.width = parseInt((document.documentElement.clientWidth / 100) * 80);
   canvas.height = parseInt((document.documentElement.clientHeight / 100) * 70);
@@ -95,20 +96,28 @@
   });
 
   draw.addEventListener("click", function (e) {
-    ctx.lineWidth = 4;
+    ctx.lineWidth = lineWidth;
     ctx.strokeStyle = colorpicker.value ? colorpicker.value : "#000";
     ctx.globalCompositeOperation = "source-over";
+	if ( e.target != size ) {
+		draw.classList.toggle("open");
+	}
+  });
+
+  size.addEventListener("change", function (e) {
+	lineWidth = this.value;
+	draw.querySelector('.size-text').innerHTML = this.value;
   });
 
   eraser.addEventListener("click", function (e) {
     // ctx.strokeStyle = 'rgba(0,0,0,0)';
-    ctx.lineWidth = 15;
+    ctx.lineWidth = lineWidth;
     ctx.globalCompositeOperation = "destination-out";
   });
 
   reset.addEventListener("click", function (e) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.lineWidth = 4;
+    ctx.lineWidth = lineWidth;
   });
 
   tools.addEventListener("click", function (e) {
